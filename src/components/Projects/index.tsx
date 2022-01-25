@@ -1,9 +1,8 @@
 import SectionTitle from '../SectionTitle';
 import ProjectItem from './ProjectsItem';
 import { Container } from './styles';
-/*import ProjectItem from './ProjectsItem';*/
-import Link from 'next/link'
 
+import Link from 'next/link'
 
 function Projects() {
   return (
@@ -32,7 +31,7 @@ function Projects() {
         
       </section>
       <button type='button'>
-        <Link href='/projetos'>
+        <Link href='/projects'>
           <a>Ver todos os projetos</a>
         </Link>
       </button>
