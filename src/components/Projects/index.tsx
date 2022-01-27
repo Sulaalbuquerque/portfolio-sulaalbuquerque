@@ -1,34 +1,36 @@
 import SectionTitle from '../SectionTitle';
 import ProjectItem from './ProjectsItem';
 import { Container } from './styles';
-
 import Link from 'next/link'
 
-function Projects() {
+interface IProjeto {
+  slug: string;
+  title: string;
+  type: string;
+  description: string;
+  link: string;
+  thumbnail: string;
+}
+
+interface ProjetosProps {
+  projetos: IProjeto[];
+}
+
+function Projects({ projetos }: ProjetosProps) {
   return (
     <Container>
       <SectionTitle title='Últimos projetos'/>
 
       <section>
-        <ProjectItem
-          title='Projeto 01' 
-          type='Website' 
-          slug='teste' 
-          img='https://images.prismic.io/slicemachine-blank/dcea6535-f43b-49a7-8623-bf281aaf1cb2_roller-skating.png?auto=compress,format'
-        />
-        <ProjectItem
-          title='Projeto 02' 
-          type='Website' 
-          slug='teste' 
-          img='https://images.prismic.io/slicemachine-blank/dcea6535-f43b-49a7-8623-bf281aaf1cb2_roller-skating.png?auto=compress,format'
-        />
-        <ProjectItem
-          title='Projeto 03' 
-          type='Website' 
-          slug='teste' 
-          img='https://images.prismic.io/slicemachine-blank/dcea6535-f43b-49a7-8623-bf281aaf1cb2_roller-skating.png?auto=compress,format'
-        />
-        
+        {projetos.slice(0, 3).map(projeto => (
+          <ProjectItem
+          key={projeto.slug}
+          title={projeto.title}
+          type={projeto.type}
+          slug={projeto.slug} 
+          img={projeto.thumbnail}
+          />
+        ))}
       </section>
       <button type='button'>
         <Link href='/projects'>

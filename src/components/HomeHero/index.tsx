@@ -4,7 +4,7 @@ import picture from '../../assets/setup5.jpg'
 
 function HomeHero() {
   return (
-    <Container>
+    <Container data-aos='fade-up'>
       <img src={picture} alt='Minha foto'/>
 
       <div>
@@ -13,7 +13,7 @@ function HomeHero() {
           <h2>Me chamo Sula Albuquerque.</h2>
         </TextContainer>
         <InfosContainer>
-          <CodeItem>
+          <CodeItem data-aos='zoom-in'>
             <span className='comment'>//Minha apresentação</span>
             <span className='purple'>Infos</span>{'\u007B'}{/*unicode*/}
             <div>
@@ -24,7 +24,7 @@ function HomeHero() {
             </div>
             {'\u007D'}{/*unicode*/}
           </CodeItem>
-          <CodeItem>
+          <CodeItem data-aos='zoom-in'>
             <span className='purple'>Cargo</span>{'\u007B'}{/*unicode*/}
             <div>
               Função: <span className='pink'>Dev Front-end,</span>
