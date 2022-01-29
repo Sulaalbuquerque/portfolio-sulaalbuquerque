@@ -2,12 +2,20 @@
 
 /* eslint-disable @typescript-eslint/naming-convention */
 import nodemailer from 'nodemailer';
-import { google } from 'googleapis';
-
-const { OAuth2 } = google.auth;
+import sendgridTransport from 'nodemailer-sendgrid-transport'
+import { NextApiRequest, NextApiResponse } from 'next';
 
 const email = process.env.MAILADRESS;
 
+const transporter = nodemailer.createTransport(
+  sendgridTransport({
+    auth: {
+      api_key: process.env.SENDGRID_API_KEY
+    }
+  })
+)
+
+/*
 const clientId = process.env.CLIENT_ID;
 const clientSecret = process.env.CLIENT_SECRET;
 const refreshToken = process.env.REFRESH_TOKEN;
@@ -45,16 +53,32 @@ const mailer = ({ senderMail, name, text }) => {
     );
   });
 };
+*/
 
-export default async (req, res) => {
-    
-  const { senderMail, name, content } = req.body;
+export default async (req: NextApiRequest, res: NextApiResponse) => {
+  try{
+    const { senderMail, name, content } = req.body;
 
-  if (senderMail === '' || name === '' || content === '') {
-    res.status(403).send();
-    return;
+    if (!senderMail.trim() || !name.trim() || !content.trim()) {
+      
+      return res.status(403).send('');
+    }
+
+    const message = {
+      from: email,
+      to: email,
+      subject: `Nova mensagem de contato - ${name}`,
+      html: `<p><b>Email: ${senderMail}</b><b>Mensagem: ${content}</b></p>`,
+      replayTo: senderMail
+    }
+
+    transporter.sendMail(message)
+
+    return res.send('')
+  }catch (err) {
+    return res.json({
+      error: true,
+      message: err.message
+    })
   }
-
-  const mailerRes = await mailer({ senderMail, name, text: content });
-  res.send(mailerRes);
 };

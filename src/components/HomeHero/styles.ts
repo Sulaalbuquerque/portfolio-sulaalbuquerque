@@ -50,34 +50,34 @@ export const TextContainer = styled.section`
     width: 100%;
 
     h1 {
-        font-size: 8rem;
+        font-size: 5rem;
         color: ${({ theme }) => theme.primary};
     }
 
     h2 {
-        font-size: 3rem;
-        font-weight: 400;
+        font-size: 2rem;
+        font-weight: 200;
         color: ${({ theme }) => theme.secondary};
     }
 
     @media (max-width: 1450px) {
 
         h1 {
-        font-size: 5rem;
+        font-size: 3rem;
         }
         h2 {
 
-        font-size: 2rem;
+        font-size: 1.6rem;
         }
     }
     @media (max-width: 1000px) {
         
         h1 {
-        font-size: 3rem;
+        font-size: 2rem;
         }
 
         h2 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         }
     }
 `

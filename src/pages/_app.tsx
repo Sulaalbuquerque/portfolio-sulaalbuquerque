@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
         showOnShallow
       />
 
-      {/*<Toaster position="bottom-right" />*/}
+      <Toaster position="bottom-right" />
       <Component {...pageProps} />
       <GlobalStyles />
     </ThemeProvider>

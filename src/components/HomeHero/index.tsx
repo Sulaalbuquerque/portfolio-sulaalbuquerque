@@ -1,6 +1,6 @@
 import { Container, TextContainer, InfosContainer, CodeItem } from './styles'
 
-import picture from '../../assets/setup5.jpg'
+import picture from '../../assets/setup2.jpg'
 
 function HomeHero() {
   return (
