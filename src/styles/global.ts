@@ -21,7 +21,7 @@ export default createGlobalStyle`
   }
   body {
     background: ${props => props.theme.background};
-    font: 400 1rem 'Montserrat', sans-serif;
+    font: 500 1rem 'Montserrat', sans-serif;
   }
   img {
     width: 100%;
@@ -41,6 +41,7 @@ export default createGlobalStyle`
     margin: 0 auto;
     max-width: 85rem;
     padding: 0 1rem;
+    
     @media(max-width:1450px) {
       max-width: 70rem;
     }

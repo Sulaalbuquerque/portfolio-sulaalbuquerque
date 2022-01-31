@@ -28,17 +28,18 @@ export const ItemContainer = styled.div`
         background: ${({ theme }) => theme.gradient};
         padding: 1rem;
         padding-top: 2.5rem;
-        height: 20rem;
+        height: 15rem;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        max-width: 19rem;
+        //max-width: 19rem;
         transition: 0.5s;
 
         h1 {
         color: ${({ theme }) => theme.primary};
         font-size: 2rem;
+        font-weight: 200;
         margin-bottom: 1.5rem;
         }
 

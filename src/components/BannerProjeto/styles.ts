@@ -21,6 +21,7 @@ export const Container = styled.div<ContainerProps>`
     h1 {
       color: ${({ theme }) => theme.primary};
       font-size: 3rem;
+      font-weight: 400;
     }
 
     h2 {

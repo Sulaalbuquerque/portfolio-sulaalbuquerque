@@ -51,6 +51,7 @@ export const TextContainer = styled.section`
 
     h1 {
         font-size: 5rem;
+        font-weight: 200;
         color: ${({ theme }) => theme.primary};
     }
 

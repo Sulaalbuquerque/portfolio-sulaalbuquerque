@@ -38,8 +38,8 @@ export const KnowledgeContainer = styled.div`
     }
 
     svg {
-        width: 6.5rem;
-        height: 6.5rem;
+        width: 4rem;
+        height: 4rem;
         color: ${({ theme }) => theme.secondary};
         transition: 0.3s;
     }
@@ -57,8 +57,8 @@ export const KnowledgeContainer = styled.div`
         }
         
         svg {
-        width: 5rem;
-        height: 5rem;
+        width: 3rem;
+        height: 3rem;
         }
     }
 `

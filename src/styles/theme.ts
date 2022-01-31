@@ -1,14 +1,15 @@
 const theme = {
-  background: '#11172B',
-  backgroundLight: '#1B2138',
-  primary: '#EFC5C4',/*#0EE7B7 */
-  secondary: '#EFC5C4',/*#7AC7E3 */
-  gradient: 'linear-gradient(225deg, #313860 0%, #11172B 100%);',
+  background: '#000',
+  backgroundLight: '#301b38',
+  primary: '#b99abd',
+  secondary: '#b99abd',
+  gradient: 'linear-gradient(225deg, #2c2035 0%, #000 100%);',
   text: '#848DA0',
-  textHighlight: '#C8C8C8',/*#444B5B */
+  textHighlight: '#C8C8C8',
   textLight: '#C4C4C4',
-  border: '#313958',
-  inputBackground: '#1E253E',
+  border: '#513d57',
+  inputBackground: '#190d1b',
+  buttonBackground: '#190d1b',
   error: '#d45d5d'
 };
 

@@ -9,9 +9,7 @@ function FormContact() {
       <SectionTitle 
         title={
           <>
-            Precisa dos
-            <br/>
-            meus serviços?
+            Precisa dos meus serviços?
           </>
         }
         description={

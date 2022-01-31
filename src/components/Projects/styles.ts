@@ -24,7 +24,7 @@ export const Container = styled.section`
   }
 
   > button {
-      background: ${({ theme }) => theme.primary};
+      background: ${({ theme }) => theme.buttonBackground};
       padding: 0.8rem 3rem;
       border-radius: 0.5rem;
       border: none;
@@ -117,12 +117,13 @@ export const ProjetoContainer = styled.div<ProjetoProps>`
       h1 {
         color: ${({ theme }) => theme.primary};
         font-size: 2.5rem;
+        font-weight: 200;
         text-shadow: -4px 5px 22px #11172b;
       }
 
       h2 {
         color: ${({ theme }) => theme.secondary};
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 300;
         text-shadow: -4px 5px 22px #11172b;
       }

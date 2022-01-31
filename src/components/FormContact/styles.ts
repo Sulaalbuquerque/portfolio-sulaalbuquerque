@@ -17,7 +17,7 @@ export const FormContainer = styled.form`
     font-weight: 300;
     font-size: 1.2rem;
     border-radius: 0.5rem;
-    background: ${({ theme }) => theme.primary};
+    background: ${({ theme }) => theme.buttonBackground};
     transition: 0.5s;
     width: fit-content;
 

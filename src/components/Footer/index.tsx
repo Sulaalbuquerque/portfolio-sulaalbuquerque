@@ -26,7 +26,7 @@ function Footer() {
             onClick={() => handleRedirect('https://github.com/Sulaalbuquerque')}
           />
           <AiFillLinkedin
-            onClick={() => handleRedirect('https://linkedin.com')}
+            onClick={() => handleRedirect('https://www.linkedin.com/in/sula-albuquerque-659968203/')}
           />
         </section>
       </div>
