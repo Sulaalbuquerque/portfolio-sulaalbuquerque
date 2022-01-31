@@ -114,9 +114,11 @@ export const CodeItem = styled.pre`
     filter: brightness(1.2);
   }
 
+  /*
   &:last-child {
     align-self: flex-end;
   }
+  */
 
   > div {
     margin: 0.2rem 0;
