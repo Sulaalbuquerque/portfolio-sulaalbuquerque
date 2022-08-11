@@ -10,7 +10,7 @@ function HomeHero() {
       <div>
         <TextContainer>
           <h1>Olá!</h1>
-          <h2>Me chamo Sula Albuquerque.</h2>
+          {/* <h2>Me chamo Sula Albuquerque.</h2> */}
         </TextContainer>
         <InfosContainer>
           <CodeItem data-aos='zoom-in'>
@@ -27,11 +27,11 @@ function HomeHero() {
           <CodeItem data-aos='zoom-in'>
             <span className='purple'>Cargo</span>{'\u007B'}{/*unicode*/}
             <div>
-              Função: <span className='pink'>Dev Front-end,</span>
+              Função: <span className='pink'>Dev Front-end</span>
             </div>
-            <div>
+            {/* <div>
               Empresa: <span className='pink'>Freelancer</span>
-            </div>
+            </div> */}
             {'\u007D'}{/*unicode*/}
           </CodeItem>
         </InfosContainer>

@@ -37,16 +37,12 @@ export const Container = styled.section`
       a {
         text-transform: uppercase;
         color: #fff;
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-weight: 300;
       }
 
       @media (max-width: 500px) {
         padding: 1rem;
-
-        a {
-          font-size: 1rem;
-        }
       }
     }
 `
@@ -82,7 +78,7 @@ export const ProjetoContainer = styled.div<ProjetoProps>`
 
     a {
       color: #fff;
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: 300;
       display: flex;
       align-items: center;
@@ -116,7 +112,7 @@ export const ProjetoContainer = styled.div<ProjetoProps>`
 
       h1 {
         color: ${({ theme }) => theme.primary};
-        font-size: 2.5rem;
+        font-size: 2rem;
         font-weight: 200;
         text-shadow: -4px 5px 22px #11172b;
       }
@@ -212,17 +208,6 @@ export const ProjetoContainer = styled.div<ProjetoProps>`
       a {
         font-size: 1.5rem;
         gap: 0.8rem;
-      }
-    }
-
-    > section > div.text {
-
-      h1 {
-        font-size: 1.5rem;
-      }
-
-      h2 {
-        font-size: 1rem;
       }
     }
   }

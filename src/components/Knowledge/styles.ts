@@ -1,24 +1,40 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-    width: 100%;
-
+     width: 100%;
+    
     > section {
         margin-top: 8rem;
         width: 100%;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 8rem;
+        gap: 4rem;
+
+        h2{
+            color: ${({ theme }) => theme.secondary};
+            font-weight: 200;
+        }
+
+        .icons{
+            display: flex;
+            flex-direction: row;
+            gap: 7rem;
+        }
 
         @media (max-width: 1000px) {
-        gap: 5rem;
+            gap: 5rem;
         }
 
         @media (max-width: 700px) {
-        gap: 3rem;
-        flex-wrap: wrap;
-        margin-top: 5rem;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 5rem;
+
+            .icons{
+                gap: 2.5rem;
+            }
         }
     }
 `
@@ -38,8 +54,8 @@ export const KnowledgeContainer = styled.div`
     }
 
     svg {
-        width: 4rem;
-        height: 4rem;
+        width: 3rem;
+        height: 3rem;
         color: ${({ theme }) => theme.secondary};
         transition: 0.3s;
     }
@@ -53,12 +69,12 @@ export const KnowledgeContainer = styled.div`
 
     @media (max-width: 1000px) {
         p {
-        font-size: 1rem;
+            font-size: 1rem;
         }
         
         svg {
-        width: 3rem;
-        height: 3rem;
+            width: 2.5rem;
+            height: 2.5rem;
         }
     }
 `
