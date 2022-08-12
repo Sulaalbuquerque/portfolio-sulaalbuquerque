@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+// eslint-disable-next-line import/prefer-default-export
 export const Container = styled.footer`
   width: 100%;
   display: flex;
@@ -47,7 +48,7 @@ export const Container = styled.footer`
 
       > section {
         gap: 0.5rem;
-        
+
         svg {
           width: 1.5rem;
           height: 1.5rem;

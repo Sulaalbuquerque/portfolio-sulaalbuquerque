@@ -24,28 +24,28 @@ export const Container = styled.section`
   }
 
   > button {
-      background: ${({ theme }) => theme.buttonBackground};
-      padding: 0.8rem 3rem;
-      border-radius: 0.5rem;
-      border: none;
-      transition: 0.5s;
+    background: ${({ theme }) => theme.buttonBackground};
+    padding: 0.8rem 3rem;
+    border-radius: 0.5rem;
+    border: none;
+    transition: 0.5s;
 
-      &:hover {
-        background: ${({ theme }) => darken(0.05, theme.primary)};
-      }
-
-      a {
-        text-transform: uppercase;
-        color: #fff;
-        font-size: 1rem;
-        font-weight: 300;
-      }
-
-      @media (max-width: 500px) {
-        padding: 1rem;
-      }
+    &:hover {
+      background: ${({ theme }) => darken(0.05, theme.primary)};
     }
-`
+
+    a {
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 300;
+    }
+
+    @media (max-width: 500px) {
+      padding: 1rem;
+    }
+  }
+`;
 
 export const ProjetoContainer = styled.div<ProjetoProps>`
   width: 100%;
@@ -86,7 +86,7 @@ export const ProjetoContainer = styled.div<ProjetoProps>`
       transition: 0.5s;
     }
   }
-  
+
   > section {
     width: 50rem;
     height: 100%;
@@ -102,7 +102,7 @@ export const ProjetoContainer = styled.div<ProjetoProps>`
       opacity: 0.75;
       transition: 0.5s;
     }
-    
+
     > div.text {
       position: absolute;
       top: 3rem;

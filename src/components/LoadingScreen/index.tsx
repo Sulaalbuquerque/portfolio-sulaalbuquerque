@@ -1,6 +1,4 @@
-
 import { Container, SpinnerContainer } from './styles';
-
 
 function LoadingScreen() {
   return (
@@ -11,6 +9,6 @@ function LoadingScreen() {
       </SpinnerContainer>
     </Container>
   );
-};
+}
 
 export default LoadingScreen;

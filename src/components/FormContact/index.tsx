@@ -1,4 +1,3 @@
-
 import SectionTitle from '../SectionTitle';
 import { Container } from './styles';
 import Form from './Form';
@@ -6,24 +5,20 @@ import Form from './Form';
 function FormContact() {
   return (
     <Container>
-      <SectionTitle 
-        title={
-          <>
-            Precisa de um dev front-end?
-          </>
-        }
+      <SectionTitle
+        title={<>Precisa de um dev front-end?</>}
         description={
           <>
             Preencha o formulário abaixo e
-            <br/>
+            <br />
             retornarei em breve.
           </>
         }
       />
 
-      <Form/>
+      <Form />
     </Container>
   );
-};
+}
 
 export default FormContact;

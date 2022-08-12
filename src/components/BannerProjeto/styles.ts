@@ -4,6 +4,7 @@ interface ContainerProps {
   imgUrl: string;
 }
 
+// eslint-disable-next-line import/prefer-default-export
 export const Container = styled.div<ContainerProps>`
   width: 100%;
   background: url(${props => props.imgUrl}) no-repeat center;
@@ -45,7 +46,7 @@ export const Container = styled.div<ContainerProps>`
   @media (max-width: 700px) {
     padding: 2rem 2.5rem;
     height: 20rem;
-    
+
     section {
       h1 {
         font-size: 1.8rem;

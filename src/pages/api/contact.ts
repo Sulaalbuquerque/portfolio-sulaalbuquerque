@@ -1,8 +1,8 @@
-/*rotas api node */
+/* rotas api node */
 
 /* eslint-disable @typescript-eslint/naming-convention */
 import nodemailer from 'nodemailer';
-import sendgridTransport from 'nodemailer-sendgrid-transport'
+import sendgridTransport from 'nodemailer-sendgrid-transport';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 const email = process.env.MAILADRESS;
@@ -13,7 +13,7 @@ const transporter = nodemailer.createTransport(
       api_key: process.env.SENDGRID_API_KEY
     }
   })
-)
+);
 
 /*
 const clientId = process.env.CLIENT_ID;
@@ -56,11 +56,10 @@ const mailer = ({ senderMail, name, text }) => {
 */
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-  try{
+  try {
     const { senderMail, name, content } = req.body;
 
     if (!senderMail.trim() || !name.trim() || !content.trim()) {
-      
       return res.status(403).send('');
     }
 
@@ -70,16 +69,16 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       subject: `Nova mensagem de contato - ${name}`,
       html: `<p><b>Email: ${senderMail}</b><b>Mensagem: ${content}</b></p>`,
       replayTo: senderMail
-    }
+    };
 
     transporter.sendMail(message);
-    await transporter.sendMail(message); 
+    await transporter.sendMail(message);
 
-    return res.send('')
-  }catch (err) {
+    return res.send('');
+  } catch (err) {
     return res.json({
       error: true,
       message: err.message
-    })
+    });
   }
 };

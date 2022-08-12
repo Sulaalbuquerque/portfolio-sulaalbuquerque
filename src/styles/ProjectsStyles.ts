@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+// eslint-disable-next-line import/prefer-default-export
 export const ProjetosContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -17,7 +18,7 @@ export const ProjetosContainer = styled.div`
     @media (max-width: 1000px) {
       grid-template-columns: 1fr 1fr;
     }
-    
+
     @media (max-width: 550px) {
       grid-template-columns: 1fr;
     }

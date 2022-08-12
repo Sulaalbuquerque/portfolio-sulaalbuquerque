@@ -1,94 +1,88 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-    width: 100%;
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    justify-content: center;
-    margin-top: 5rem;
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
 
+  > img {
+    width: 40rem;
+    flex: 1;
+  }
+
+  > div {
+    flex: 4;
+  }
+
+  @media (max-width: 1450px) {
     > img {
-        width: 40rem;
-        flex: 1;
+      width: 30rem;
     }
 
     > div {
-        flex: 4;
+      flex: 1;
     }
+  }
 
-    @media (max-width: 1450px) {
-
-        > img {
-        width: 30rem;
-        }
-
-        > div {
-        flex: 1;
-        }
+  @media (max-width: 1000px) {
+    > img {
+      width: 22rem;
     }
+  }
 
-    @media (max-width: 1000px) {
+  @media (max-width: 700px) {
+    flex-direction: column-reverse;
 
-        > img {
-        width: 22rem;
-        }
+    > div {
+      width: 100%;
     }
-
-    @media (max-width: 700px) {
-        
-        flex-direction: column-reverse;
-
-        > div {
-        width: 100%;
-        }
-    }
-`
+  }
+`;
 
 export const TextContainer = styled.section`
-    margin-bottom: 2rem;
-    width: 100%;
+  margin-bottom: 2rem;
+  width: 100%;
 
+  h1 {
+    font-size: 5rem;
+    font-weight: 200;
+    color: ${({ theme }) => theme.primary};
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 200;
+    color: ${({ theme }) => theme.secondary};
+  }
+
+  @media (max-width: 1450px) {
     h1 {
-        font-size: 5rem;
-        font-weight: 200;
-        color: ${({ theme }) => theme.primary};
+      font-size: 3rem;
+    }
+    h2 {
+      font-size: 1.6rem;
+    }
+  }
+  @media (max-width: 1000px) {
+    h1 {
+      font-size: 2rem;
     }
 
     h2 {
-        font-size: 2rem;
-        font-weight: 200;
-        color: ${({ theme }) => theme.secondary};
+      font-size: 1.2rem;
     }
-
-    @media (max-width: 1450px) {
-
-        h1 {
-        font-size: 3rem;
-        }
-        h2 {
-
-        font-size: 1.6rem;
-        }
-    }
-    @media (max-width: 1000px) {
-        
-        h1 {
-        font-size: 2rem;
-        }
-
-        h2 {
-        font-size: 1.2rem;
-        }
-    }
-`
+  }
+`;
 
 export const InfosContainer = styled.section`
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-`
+`;
 
 export const CodeItem = styled.pre`
   background: ${({ theme }) => theme.gradient};
@@ -135,11 +129,9 @@ export const CodeItem = styled.pre`
   }
   */
 
-  
   span.pink {
-    color: #EFC5C4;
+    color: #efc5c4;
   }
-  
 
   span.comment {
     color: ${({ theme }) => theme.text};
