@@ -72,7 +72,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       replayTo: senderMail
     }
 
-    transporter.sendMail(message)
+    transporter.sendMail(message);
+    await transporter.sendMail(message); 
 
     return res.send('')
   }catch (err) {
