@@ -1,6 +1,6 @@
 import { Container, TextContainer, InfosContainer, CodeItem } from './styles';
 
-import picture from '../../assets/setup5.webp';
+import picture from '../../../public/assets/setup.webp';
 
 function HomeHero() {
   return (
